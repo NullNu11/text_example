@@ -3,9 +3,19 @@
  */
 package MyFarm.farmland;
 
-public class BuildingLand extends BaseLand {
+public   class BuildingLand extends BaseLand {
+
+
+    public BuildingLand(float attribute) {
+        super(attribute);
+    }
 
     public BuildingLand() {
+
+    }
+
+    @Override
+    public void operate(String att) {
 
     }
 

@@ -10,12 +10,25 @@ import java.io.Serializable;
 
 public abstract class BaseLand implements Serializable {
     protected Creature creature;//作物
+    //内部状态
+    public String fieldName;
+    //外部状态
+    protected float attribute;
+
+    public BaseLand() {
+
+    }
 
     public void plant(Creature _creature) {
         this.creature = _creature;
 
     }
-
+    //要求享元角色必须接受外部状态
+    public BaseLand(float attribute) {
+        this.attribute = attribute;
+    }
+    //定义业务操作
+    public abstract void operate(String att);
     //显示该土地的作物
     public abstract void showCrop();
 
